@@ -1,0 +1,25 @@
+<odoo>
+    <record id="alumnos_list_action" model="ir.actions.act_window">
+        <field name="name">Alumnos</field>
+        <field name="res_model">upolang.alumno</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crear el primer alumno</p>
+        </field>
+    </record>
+
+    <record id="upolang_alumno_tree_view" model="ir.ui.view">
+        <field name="name">upolang.alumno.tree</field>
+        <field name="model">upolang.alumno</field>
+        <field name="arch" type="xml">
+            <tree string="tree_string">
+                <field name="nomAlumno"/>
+                <field name="dni"/>
+                <field name="domicilio"/>
+                <field name="correo"/>
+                <field name="localidad"/>
+                <field name="fechaNac"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

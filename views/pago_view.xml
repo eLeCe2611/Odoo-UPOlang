@@ -1,0 +1,26 @@
+<odoo>
+  <record id="pagos_list_action" model="ir.actions.act_window">
+    <field name="name">Pagos</field>
+    <field name="res_model">upolang.pago</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crear el primer pago</p>
+    </field>
+  </record>
+
+  <record id="view_pago_list" model="ir.ui.view">
+    <field name="name">upolang.pago.list</field>
+    <field name="model">upolang.pago</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="fecha"/>
+        <field name="descuento"/>
+        <field name="efectivo"/>
+        <field name="numTarjeta"/>
+        <field name="numPaypal"/>
+        <field name="idFactura"/>
+        <field name="idTipoPago"/>
+      </tree>
+    </field>
+  </record>
+</odoo>

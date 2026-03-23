@@ -1,0 +1,24 @@
+<odoo>
+  <record id="valoraciones_list_action" model="ir.actions.act_window">
+    <field name="name">Valoraciones</field>
+    <field name="res_model">upolang.valoracion</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crear la primera valoracion</p>
+    </field>
+  </record>
+
+  <record id="view_valoracion_list" model="ir.ui.view">
+    <field name="name">upolang.valoracion.list</field>
+    <field name="model">upolang.valoracion</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="puntuacion"/>
+        <field name="comentario"/>
+        <field name="fecha"/>
+        <field name="idAlumno"/>
+        <field name="idAsignatura"/>
+      </tree>
+    </field>
+  </record>
+</odoo>

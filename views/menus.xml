@@ -1,0 +1,36 @@
+<odoo>
+  <!-- Top menu item -->
+  <menuitem name="Upolang" id="main_upolang_menu" groups="group_upolang_manager"/>
+
+  <!-- menu categories -->
+  <menuitem name="Alumnos" id="upolang_alumnos" groups="group_upolang_manager" parent="main_upolang_menu"/>
+  <menuitem name="Matriculas" id="upolang_matriculas" groups="group_upolang_manager" parent="main_upolang_menu"/>
+  <menuitem name="Asignaturas" id="upolang_asignaturas" groups="group_upolang_manager" parent="main_upolang_menu"/>
+  <menuitem name="Contratos" id="upolang_contratos" groups="group_upolang_manager" parent="main_upolang_menu"/>
+  <menuitem name="Facturas" id="upolang_facturas" groups="group_upolang_manager" parent="main_upolang_menu"/>
+  <menuitem name="Evaluacion" id="upolang_evaluacion" groups="group_upolang_manager" parent="main_upolang_menu"/>
+
+  <!-- actions -->
+  <menuitem name="Alumnos" id="alumnos_menu" parent="upolang_alumnos" groups="group_upolang_manager" action="alumnos_list_action"/>
+  <menuitem name="Progresos" id="progresos_menu" parent="upolang_alumnos" groups="group_upolang_manager" action="progresos_list_action"/>
+  <menuitem name="Certificados" id="certificados_menu" parent="upolang_alumnos" groups="group_upolang_manager" action="certificados_list_action"/>
+  <menuitem name="Valoraciones" id="valoraciones_menu" parent="upolang_alumnos" groups="group_upolang_manager" action="valoraciones_list_action"/>
+  
+  <menuitem name="Matriculas" id="matriculas_menu" parent="upolang_matriculas" groups="group_upolang_manager" action="matriculas_list_action"/>
+
+  <menuitem name="Tipo de asignaturas" id="tipoasignaturas_menu" parent="upolang_asignaturas" groups="group_upolang_manager" action="tipoasignaturas_list_action"/>
+  <menuitem name="Aula" id="aula_menu" parent="upolang_asignaturas" groups="group_upolang_manager" action="aula_list_action"/>
+
+  <menuitem name="Contratos" id="contratos_menu" parent="upolang_contratos" groups="group_upolang_manager" action="contratos_list_action"/>
+  <menuitem name="Profesores" id="profesores_menu" parent="upolang_contratos" groups="group_upolang_manager" action="profesores_list_action"/>
+  <menuitem name="Empresas" id="empresas_menu" parent="upolang_contratos" groups="group_upolang_manager" action="empresas_list_action"/>
+  
+  <menuitem name="Asignaturas" id="asignaturas_menu" parent="upolang_asignaturas" groups="group_upolang_manager" action="asignaturas_list_action"/>  
+  <menuitem name="Contratos" id="contratos_menu" parent="upolang_asignaturas" groups="group_upolang_manager" action="contratos_list_action"/>
+  
+  <menuitem name="Facturas" id="factura_menu" parent="upolang_facturas" groups="group_upolang_manager" action="facturas_list_action"/>
+  <menuitem name="Pagos" id="pagos_menu" parent="upolang_facturas" groups="group_upolang_manager" action="pagos_list_action"/>
+  <menuitem name="Metodo de pago" id="metodopago_menu" parent="upolang_facturas" groups="group_upolang_manager" action="metodopagos_list_action"/>
+
+  <menuitem name="Evaluacion" id="evaluacion_menu" parent="upolang_evaluacion" groups="group_upolang_manager" action="evaluacion_list_action"/>
+</odoo>

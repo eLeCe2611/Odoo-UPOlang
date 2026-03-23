@@ -1,0 +1,52 @@
+<odoo>
+  <!-- Acción para listar y mostrar la vista form -->
+  <record id="evaluacion_list_action" model="ir.actions.act_window">
+    <field name="name">Evaluacion</field>
+    <field name="res_model">upolang.evaluacion</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crear la primera evaluación</p>
+    </field>
+  </record>
+
+  <!-- Vista Tree (Lista) -->
+  <record id="view_evaluacion_list" model="ir.ui.view">
+    <field name="name">upolang.evaluacion.list</field>
+    <field name="model">upolang.evaluacion</field>
+    <field name="arch" type="xml">
+      <tree string="Evaluaciones">
+        <field name="fecha"/>
+        <field name="descripcion"/>
+        <field name="puntMaxima"/>
+        <field name="puntObtenida"/>
+        <field name="idAsignatura"/>
+        <field name="idAlumno"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Vista Form -->
+  <record id="view_evaluacion_form" model="ir.ui.view">
+    <field name="name">upolang.evaluacion.form</field>
+    <field name="model">upolang.evaluacion</field>
+    <field name="arch" type="xml">
+      <form string="Evaluación">
+        <sheet>
+          <group>
+            <field name="fecha" placeholder="Ingrese la fecha de la evaluación..."/>
+            <field name="descripcion" placeholder="Descripción de la evaluación..."/>
+          </group>
+          <group>
+            <field name="puntMaxima" placeholder="Puntaje máximo..."/>
+            <field name="puntObtenida" placeholder="Puntaje obtenido..."/>
+          </group>
+          <group>
+            <field name="idAsignatura" placeholder="idAsignatura..."/>
+            <field name="idAlumno" placeholder="idAlumno..."/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>
+

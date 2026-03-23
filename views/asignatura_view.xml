@@ -1,0 +1,89 @@
+<odoo>
+  <!-- Acción para abrir las asignaturas con vista list, form y calendar -->
+  <record id="asignaturas_list_action" model="ir.actions.act_window">
+    <field name="name">Asignaturas</field>
+    <field name="res_model">upolang.asignatura</field>
+    <field name="view_mode">list,form,calendar,gantt</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crear la primera asignatura</p>
+    </field>
+  </record>
+
+  <!-- Vista de lista -->
+  <record id="view_asignatura_list" model="ir.ui.view">
+    <field name="name">upolang.asignatura.list</field>
+    <field name="model">upolang.asignatura</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="nivel"/>
+        <field name="descripcion"/>
+        <field name="fechaInicio"/>
+        <field name="fechaFin"/>
+        <field name="duracion"/>        
+        <field name="diaSemana"/>
+        <field name="hora"/>
+        <field name="asistentes"/>
+        <field name="maxAsistentes"/>
+        <field name="idAula"/>
+        <field name="idTipoAsignatura" string="Tipo"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Vista de formulario -->
+  <record id="view_asignatura_form" model="ir.ui.view">
+    <field name="name">upolang.asignatura.form</field>
+    <field name="model">upolang.asignatura</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="nivel"/>
+            <field name="fechaInicio"/>
+            <field name="fechaFin"/>
+            <field name="duracion" readonly="1" />
+            <field name="diaSemana"/>
+            <field name="hora"/>
+            <field name="asistentes" readonly="1"/>
+            <field name="maxAsistentes"/>
+            <field name="descripcion"/>
+            <field name="idTipoAsignatura"/>
+            <field name="idAula"/>
+            <field name="idCertificado"/>
+            <field name="idProgreso"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- Vista de calendario -->
+  <record id="view_asignatura_calendar" model="ir.ui.view">
+    <field name="name">upolang.asignatura.calendar</field>
+    <field name="model">upolang.asignatura</field>
+    <field name="arch" type="xml">
+      <calendar string="Calendario de Asignaturas" date_start="fechaInicio" date_stop="fechaFin">
+        <field name="name"/>
+        <field name="nivel"/>
+        <field name="idTipoAsignatura"/>
+        <field name="idAula"/>
+      </calendar>
+    </field>
+  </record>
+
+  <!-- Vista Gantt, muestra también la duración -->
+  <record id="view_asignatura_gantt" model="ir.ui.view">
+    <field name="name">upolang.asignatura.gantt</field>
+    <field name="model">upolang.asignatura</field>
+    <field name="arch" type="xml">
+      <gantt date_start="fechaInicio" date_stop="fechaFin" string="Diagrama Gantt de Asignaturas">
+        <field name="name"/>
+        <field name="nivel"/>
+        <field name="idTipoAsignatura"/>
+        <field name="idAula"/>
+      </gantt>
+    </field>
+  </record>
+</odoo>

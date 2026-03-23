@@ -1,0 +1,4 @@
+id,fecha,descuento,efectivo,numTarjeta,numPaypal,factura,metodoPago
+pago1,"2024-12-10",False,,9876543219876543,,,
+pago2,"2024-12-11",True,50,,,,
+pago3,"2024-12-12",True,,,123456789,,

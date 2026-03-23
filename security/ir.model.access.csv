@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_empresa_manager,access_empresa_manager,model_upolang_empresa,base.group_user,1,1,1,1
+access_profesor_manager,access_profesor_manager,model_upolang_profesor,base.group_user,1,1,1,1
+access_asignatura_manager,access_asignatura_manager,model_upolang_asignatura,base.group_user,1,1,1,1
+access_contrato_manager,access_contrato_manager,model_upolang_contrato,base.group_user,1,1,1,1
+access_certificado_manager,access_certificado_manager,model_upolang_certificado,base.group_user,1,1,1,1
+access_alumno_manager,access_alumno_manager,model_upolang_alumno,base.group_user,1,1,1,1
+access_valoracion_manager,access_valoracion_manager,model_upolang_valoracion,base.group_user,1,1,1,1
+access_progreso_manager,access_progreso_manager,model_upolang_progreso,base.group_user,1,1,1,1
+access_matricula_manager,access_matricula_manager,model_upolang_matricula,base.group_user,1,1,1,1
+access_aula_manager,access_aula_manager,model_upolang_aula,base.group_user,1,1,1,1
+access_evaluacion_manager,access_evaluacion_manager,model_upolang_evaluacion,base.group_user,1,1,1,1
+access_metodopago_manager,access_metodopago_manager,model_upolang_metodopago,base.group_user,1,1,1,1
+access_factura_manager,access_factura_manager,model_upolang_factura,base.group_user,1,1,1,1
+access_pago_manager,access_pago_manager,model_upolang_pago,base.group_user,1,1,1,1
+access_tipoasignatura_manager,access_tipoasignatura_manager,model_upolang_tipoasignatura,base.group_user,1,1,1,1
